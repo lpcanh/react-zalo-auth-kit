@@ -1,8 +1,8 @@
 {
   "name": "react-zalo-auth-kit",
   "version": "1.0.70",
-  "main": "dist/cjs/index",
-  "module": "dist/esm/index",
+  "main": "dist/index",
+  "module": "dist/index",
   "private": false,
   "license": "MIT",
   "description": "React components kit for Zalo Auth",
