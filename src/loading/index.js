@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import { createRoot } from 'react-dom/client';
+import { render } from 'react-dom';
 import './loading-style.css';
 
 // ReactDOM.render is no longer supported in React 18. Use createRoot instead. Learn more: https://reactjs.org/link/switch-to-createroot
@@ -42,8 +42,8 @@ function createElementReconfirm(properties) {
     if (divTarget) {
 		// Rerender - the mounted ReactConfirmAlert
 		// render(<Loading {...properties} />, divTarget)
-        const root = createRoot(divTarget, "react-confirm-alert"); // createRoot(container!) if you use TypeScript
-        root.render(<Loading {...properties} />);
+		// const root = createRoot(divTarget, "react-confirm-alert"); // createRoot(container!) if you use TypeScript
+    render(<Loading {...properties} />, divTarget);
 	} else {
 		// Mount the ReactConfirmAlert component
 		document.body.children[0].classList.add('react-confirm-alert-blur')
@@ -51,8 +51,8 @@ function createElementReconfirm(properties) {
 		divTarget.id = 'react-confirm-alert'
 		document.body.appendChild(divTarget)
 		// render(<Loading {...properties} />, divTarget)
-        const root = createRoot(divTarget, "react-confirm-alert"); // createRoot(container!) if you use TypeScript
-        root.render(<Loading {...properties} />);
+		// const root = createRoot(divTarget, "react-confirm-alert"); // createRoot(container!) if you use TypeScript
+    render(<Loading {...properties} />, divTarget);
 	}
 }
 
